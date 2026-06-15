@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Henry Schubert — AI &amp; Automation Engineer</title>
+<meta name="description" content="Henry Schubert builds and ships production AI and automation systems: agentic LLM applications, real-time voice interfaces, and Python data pipelines.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0d1117; --panel:#161b22; --panel2:#1c2330; --line:#272e3a;
+    --text:#e6edf3; --muted:#9aa7b4; --accent:#3fb6a8; --accent2:#6ea8fe;
+    --max:1040px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+  section{padding:64px 0}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:10;background:rgba(13,17,23,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+  .brand{font-weight:700;letter-spacing:.2px}
+  .nav-links{display:flex;gap:26px;font-size:.92rem;color:var(--muted)}
+  .nav-links a:hover{color:var(--text)}
+  @media(max-width:620px){.nav-links{display:none}}
+
+  /* hero */
+  .hero{padding:88px 0 56px;border-bottom:1px solid var(--line)}
+  .eyebrow{color:var(--accent);font-weight:600;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:18px}
+  .hero h1{font-size:clamp(2.2rem,6vw,3.6rem);font-weight:800;line-height:1.08;letter-spacing:-.02em}
+  .hero h1 span{color:var(--accent)}
+  .hero p{margin-top:22px;max-width:660px;color:var(--muted);font-size:1.12rem}
+  .cta{margin-top:34px;display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:12px 22px;border-radius:9px;font-weight:600;font-size:.95rem;border:1px solid var(--line);transition:.18s}
+  .btn.primary{background:var(--accent);color:#062b27;border-color:var(--accent)}
+  .btn.primary:hover{filter:brightness(1.08);transform:translateY(-1px)}
+  .btn.ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+  /* section heading */
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:34px}
+  .sec-head h2{font-size:1.5rem;font-weight:700;letter-spacing:-.01em}
+  .sec-head .ln{flex:1;height:1px;background:var(--line)}
+
+  /* about */
+  .about p{max-width:780px;color:var(--muted);font-size:1.08rem}
+  .about strong{color:var(--text);font-weight:600}
+
+  /* projects */
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px;transition:.2s;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-3px);border-color:var(--accent)}
+  .card .label{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  .card h3{margin:10px 0 4px;font-size:1.22rem;font-weight:700}
+  .card .role{color:var(--muted);font-size:.85rem;margin-bottom:12px}
+  .card p{color:var(--muted);font-size:.96rem;flex:1}
+  .tags{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px}
+  .tag{font-size:.74rem;padding:5px 10px;border-radius:20px;background:var(--panel2);border:1px solid var(--line);color:#cbd5e1}
+
+  /* skills */
+  .skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+  @media(max-width:680px){.skills-grid{grid-template-columns:1fr}}
+  .skill-block{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:22px}
+  .skill-block h4{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent2);margin-bottom:12px;font-weight:600}
+  .skill-block .row{display:flex;flex-wrap:wrap;gap:8px}
+
+  /* contact */
+  .contact{text-align:center;border-top:1px solid var(--line)}
+  .contact h2{font-size:1.8rem;font-weight:800;letter-spacing:-.01em}
+  .contact p{color:var(--muted);margin:14px auto 28px;max-width:520px}
+
+  footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.85rem;text-align:center}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(16px);transition:.6s ease}
+  .reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="brand">Henry Schubert</div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">AI &amp; Automation Engineer</div>
+    <h1>I build and ship<br><span>production AI and automation</span> systems.</h1>
+    <p>Agentic LLM applications, real time voice interfaces, and Python data pipelines, backed by an investment operations background where every number has to reconcile to the cent.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">View projects</a>
+      <a class="btn ghost" href="mailto:hdschubert22@gmail.com">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap reveal">
+    <div class="sec-head"><h2>About</h2><div class="ln"></div></div>
+    <p>I am an engineer who directs AI to build working software, then wraps it in unusual rigor: tests first development, verification gates, and adversarial review. I come from investment operations, where the output has to be correct, reconciled, and trusted, and I hold the systems I build to that same standard. Recent work includes a daily use voice assistant, a quantitative research engine, and automation that replaced manual financial reporting at scale. Core strengths are <strong>Python</strong>, <strong>LLM and agent orchestration</strong>, <strong>API integration</strong>, and disciplined, test driven delivery.</p>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Selected Projects</h2><div class="ln"></div></div>
+    <div class="grid">
+
+      <div class="card reveal">
+        <div class="label">Personal</div>
+        <h3>Jarvis</h3>
+        <div class="role">Agentic AI Voice Assistant</div>
+        <p>A hands free, always listening voice assistant built as a distributed Windows and WSL2 system: wake word detection, Whisper speech to text, neural text to speech, and a Claude Code agent that takes real actions such as calendar management, music control, and a daily market and schedule briefing. Hardened with about 115 tests and multi agent code review across roughly 13,700 lines.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Claude Code</span><span class="tag">Whisper</span><span class="tag">WSL2</span><span class="tag">Neural TTS</span></div>
+      </div>
+
+      <div class="card reveal">
+        <div class="label">Personal</div>
+        <h3>Crystal Ball</h3>
+        <div class="role">Quantitative Market Research Engine</div>
+        <p>A contrarian factor research package with resilient data collectors over free APIs, an append only Parquet data lake, and an honest backtest engine reporting rank IC, quintile long short spreads net of costs, and regime tests, with careful point in time and survivorship handling.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">pandas</span><span class="tag">Parquet</span><span class="tag">Backtesting</span></div>
+      </div>
+
+      <div class="card reveal">
+        <div class="label">Personal</div>
+        <h3>Bare Kernel</h3>
+        <div class="role">Brand Website &amp; Generative AI Content</div>
+        <p>Founded an olive oil popcorn brand and hand coded its responsive marketing website in vanilla HTML, CSS, and JavaScript, plus a links page, product labels, and social carousels. Built a local ComfyUI generative AI pipeline (Flux images and LTX Video) running on consumer hardware.</p>
+        <div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">ComfyUI</span><span class="tag">Flux</span></div>
+      </div>
+
+      <div class="card reveal">
+        <div class="label">Professional</div>
+        <h3>Workflow Automation</h3>
+        <div class="role">Financial Reporting &amp; Procurement</div>
+        <p>At work I build Python and PowerShell automation for financial reporting and procurement: a reusable pipeline that rebuilds a multi billion dollar investment report reconciled to the cent, AI verification gates that block an agent until totals tie, and Selenium driven workflow automation behind corporate single sign on. Details kept general for confidentiality.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">PowerShell</span><span class="tag">Selenium</span><span class="tag">Smartsheet API</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Skills</h2><div class="ln"></div></div>
+    <div class="skills-grid">
+      <div class="skill-block reveal">
+        <h4>AI &amp; LLM</h4>
+        <div class="row">
+          <span class="tag">Agentic system design</span><span class="tag">LLM orchestration</span><span class="tag">Claude Code</span><span class="tag">Azure OpenAI</span><span class="tag">Prompt engineering</span><span class="tag">Embeddings</span><span class="tag">Whisper STT</span><span class="tag">Neural TTS</span><span class="tag">ComfyUI / GGUF</span>
+        </div>
+      </div>
+      <div class="skill-block reveal">
+        <h4>Languages</h4>
+        <div class="row">
+          <span class="tag">Python</span><span class="tag">SQL</span><span class="tag">JavaScript / Node</span><span class="tag">HTML / CSS</span><span class="tag">PowerShell</span><span class="tag">Bash</span><span class="tag">R</span>
+        </div>
+      </div>
+      <div class="skill-block reveal">
+        <h4>Data &amp; Pipelines</h4>
+        <div class="row">
+          <span class="tag">pandas</span><span class="tag">openpyxl</span><span class="tag">Parquet</span><span class="tag">idempotent ETL</span><span class="tag">pytest</span><span class="tag">Smartsheet API</span><span class="tag">Selenium</span>
+        </div>
+      </div>
+      <div class="skill-block reveal">
+        <h4>Platforms &amp; Tools</h4>
+        <div class="row">
+          <span class="tag">Git</span><span class="tag">WSL2 / Linux</span><span class="tag">Power Automate</span><span class="tag">Microsoft Graph</span><span class="tag">advanced Excel</span><span class="tag">Power BI</span><span class="tag">Tableau</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap reveal">
+    <h2>Let us build something</h2>
+    <p>Open to roles in applied AI, automation, and data engineering. The fastest way to reach me is email.</p>
+    <a class="btn primary" href="mailto:hdschubert22@gmail.com">hdschubert22@gmail.com</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Henry Schubert &middot; Greater Boston, MA &middot; Built with HTML, CSS, and JavaScript</div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
